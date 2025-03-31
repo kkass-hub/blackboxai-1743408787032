@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video - YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-[#0F0F0F] text-white">
+    <!-- Header (same as index.html) -->
+    <header class="fixed top-0 left-0 right-0 bg-[#0F0F0F] z-50 flex items-center px-4 h-14 border-b border-[#303030]">
+        <!-- Header content identical to index.html -->
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex pt-14">
+        <!-- Video Player Section -->
+        <main class="flex-grow p-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Video Player -->
+                <div class="w-full aspect-video bg-black rounded-xl mb-4">
+                    <video controls class="w-full h-full" poster="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg">
+                        <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black text-white">
+                            <div class="text-center p-4">
+                                <i class="fas fa-exclamation-triangle text-4xl mb-2"></i>
+                                <p>Your browser doesn't support HTML5 video</p>
+                                <p class="text-sm mt-2">Try watching on a different browser</p>
+                            </div>
+                        </div>
+                    </video>
+                </div>
+
+                <!-- Video Title and Info -->
+                <h1 class="text-xl font-bold mb-2">How to Build a YouTube Clone with Tailwind CSS</h1>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="text-gray-400 text-sm">
+                        <span>100,000 views</span> • <span>2 days ago</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button class="flex items-center space-x-1 px-3 py-1 rounded-full bg-[#272727] hover:bg-[#3F3F3F]">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>1.2K</span>
+                        </button>
+                        <button class="flex items-center space-x-1 px-3 py-1 rounded-full bg-[#272727] hover:bg-[#3F3F3F]">
+                            <i class="fas fa-thumbs-down"></i>
+                        </button>
+                        <button class="flex items-center space-x-1 px-3 py-1 rounded-full bg-[#272727] hover:bg-[#3F3F3F]">
+                            <i class="fas fa-share"></i>
+                            <span>Share</span>
+                        </button>
+                        <button class="flex items-center space-x-1 px-3 py-1 rounded-full bg-[#272727] hover:bg-[#3F3F3F]">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Channel Info -->
+                <div class="flex items-center justify-between border-t border-b border-[#303030] py-3 mb-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-500 mr-3"></div>
+                        <div>
+                            <h3 class="font-medium">Web Dev Tutorials</h3>
+                            <p class="text-gray-400 text-sm">50K subscribers</p>
+                        </div>
+                    </div>
+                    <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-full font-medium">
+                        Subscribe
+                    </button>
+                </div>
+
+                <!-- Video Description -->
+                <div class="bg-[#272727] p-3 rounded-lg mb-6">
+                    <div class="flex items-center text-sm mb-2">
+                        <span class="mr-4">10,000 views</span>
+                        <span>2 days ago</span>
+                    </div>
+                    <p class="text-sm">
+                        Learn how to build a YouTube clone using Tailwind CSS in this comprehensive tutorial. 
+                        We'll cover responsive design, dark mode implementation, and interactive components.
+                    </p>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-4">
+                        <span class="font-medium mr-4">1,234 Comments</span>
+                        <button class="flex items-center text-sm">
+                            <i class="fas fa-sort mr-2"></i>
+                            <span>Sort by</span>
+                        </button>
+                    </div>
+
+                    <!-- Comment Input -->
+                    <div class="flex mb-6">
+                        <div class="w-9 h-9 rounded-full bg-gray-500 mr-3"></div>
+                        <div class="flex-grow">
+                            <input type="text" placeholder="Add a comment..." 
+                                   class="w-full bg-transparent border-b border-[#303030] pb-1 focus:outline-none focus:border-white">
+                        </div>
+                    </div>
+
+                    <!-- Sample Comments -->
+                    <div class="flex mb-4">
+                        <div class="w-9 h-9 rounded-full bg-gray-500 mr-3"></div>
+                        <div>
+                            <h4 class="font-medium text-sm">User123</h4>
+                            <p class="text-sm mb-1">Great tutorial! Very helpful for beginners.</p>
+                            <div class="flex items-center text-xs text-gray-400">
+                                <button class="flex items-center mr-3">
+                                    <i class="fas fa-thumbs-up mr-1"></i>
+                                    <span>24</span>
+                                </button>
+                                <button class="flex items-center mr-3">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </button>
+                                <span class="mr-3">REPLY</span>
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Recommended Videos Sidebar -->
+        <aside class="hidden lg:block w-80 p-4">
+            <div class="space-y-4">
+                <!-- Recommended Video 1 -->
+                <div class="flex cursor-pointer">
+                    <div class="relative w-40 h-24 flex-shrink-0 mr-2">
+                        <img src="https://images.pexels.com/photos/414102/pexels-photo-414102.jpeg" 
+                             alt="Video thumbnail" 
+                             class="w-full h-full rounded-lg object-cover">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">5:45</span>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-sm line-clamp-2">Learn JavaScript in 5 minutes</h4>
+                        <p class="text-gray-400 text-xs">Coding Tutorials</p>
+                        <p class="text-gray-400 text-xs">250K views • 1 week ago</p>
+                    </div>
+                </div>
+
+                <!-- Recommended Video 2 -->
+                <div class="flex cursor-pointer">
+                    <div class="relative w-40 h-24 flex-shrink-0 mr-2">
+                        <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" 
+                             alt="Video thumbnail" 
+                             class="w-full h-full rounded-lg object-cover">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">15:20</span>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-sm line-clamp-2">Cute puppies compilation 2023</h4>
+                        <p class="text-gray-400 text-xs">Animal Planet</p>
+                        <p class="text-gray-400 text-xs">1M views • 3 days ago</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        // Mobile sidebar toggle
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            document.querySelector('aside').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
